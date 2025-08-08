@@ -1,8 +1,13 @@
+import { Car } from "../../cars.const";
 import Button from "../Button/Button";
 import CarsColorList from "../CarsColorList/CarsColorList";
 import './CarsItem.css';
 
-function ListItem({brand, model, year, price, currency, color, isReserved, carIndex}) {
+type ListItemType = Car & {
+  carIndex: number;
+};
+
+function ListItem({brand, model, year, price, currency, color, isReserved, carIndex} : ListItemType) {
 
   return (
     <li className='carsItem'>

@@ -1,6 +1,6 @@
-import './App.css';
 import { carsList } from './cars.const';
 import ListItem from './components/CarsItem/CarsItem';
+import './App.css';
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
     {carsList.length > 0 ? 
         <ul className='carsList'>
             {carsList.map((car, index) => (
-                <ListItem key={index} carIndex={index} {...car} />
+                <ListItem key={String(index)} carIndex={index} {...car} />
             ))}
         </ul> 
         :
